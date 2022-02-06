@@ -1,0 +1,19 @@
+#theComboBox{
+     color: white;
+    background-color: #BE825D;
+    direction: rtl;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'assistant', sans-serif;
+    padding-right: 35px;
+    padding-left: 50px;
+    padding: 0px 35px 0px 50px;
+    height: 20px;
+    width: 50px;
+}
+
+#theComboBox option{
+
+   border-radius: 30px;
+     font-size: 20px;
+}

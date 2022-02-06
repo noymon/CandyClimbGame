@@ -1,0 +1,307 @@
+﻿
+body {
+    background-color: white;
+    font-family: 'Assistant', sans-serif;
+}
+
+iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display:flex;
+}
+
+#gameArea {
+    overflow: hidden;
+    position: relative;
+    height: 80vh;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.hide {
+    display: none;
+}
+
+/*הגדרת הדגשה לבולד לאלמנטים הרצויים*/
+.bold{
+    font-weight: 800;
+}
+
+/*ניווט בחלק העליון*/
+header {
+    background-color: #FFCC8E;
+    width: 100%;
+    height: 50px;
+    position: relative;
+    direction: rtl;
+    display: block;
+    direction: rtl;
+    z-index: 3;
+    border-radius: 10px;
+}
+
+nav {
+    margin-top: -70px;
+    margin-left: 10px;
+    direction: rtl;
+}
+
+    nav ul {
+        list-style: none;
+        direction: rtl;
+    }
+
+        nav ul li {
+            display: inline-block;
+            float: left;
+            direction: rtl;
+        }
+
+            nav ul li a {
+                display: block;
+                color: rgb(30, 104, 177);
+                text-align: center;
+                padding: 9px 12px;
+                font-weight: 700;
+                font-size: 16pt;
+                font-family: 'Assistant', sans-serif;
+                direction: rtl;
+                text-decoration: none;
+                color: #68451A;
+            }
+
+                nav ul li a:hover {
+                    font-weight: 800;
+                    cursor: pointer;
+                    font-family: 'Assistant', sans-serif;
+                    direction: rtl;
+                    text-decoration: none;
+                }
+
+    /*כותרת משחק*/
+    header > a > p {
+        font-family: 'Assistant', sans-serif;
+        font-size: 12pt;
+        font-weight: 800;
+        position: relative;
+        top: -10px;
+        color: #68451A;
+        display: inline-block;
+        direction: rtl;
+    }
+
+/*לוגו*/
+#logo {
+    width: 300px;
+    height: 52px;
+    padding: 0px 9px;
+    direction: rtl;
+}
+
+
+
+
+/*חלוניות נפתחות*/
+.popUp {
+    background-color: #FFE6C7;
+    color: #68451A;
+    width: 769px;
+    height: 450px;
+    position: fixed;
+    top: 100px;
+    z-index: 9;
+    text-align: center;
+    border-radius: 25px;
+    padding: 10px 10px 20px 10px;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    direction: rtl;
+    font-size: 16px;
+}
+
+
+                /*חלונית איך משחקים*/
+#howToPlayDiv {
+    text-align: right;
+}
+
+/*מרווחים בין התיאורי מקשים*/
+    #howToPlayDiv div span{
+        padding-left:20px;
+    }
+    /*תמונות של מקשי מקלדת*/
+    #keyboardImgs {
+        display: flex;
+        margin-right: 2px;
+    }
+         /*מרווחים בין התמונות של המקשים*/
+        #keyboardImgs > div {
+            margin-left: 37px;
+        }
+       /* ריווח מהצד של החלונית - איך משחקים*/
+        #howToPlayDiv > h1, #howToPlayDiv > h2, #howToPlayDiv > p, #keyboardDiv {
+            margin-right: 30px;
+        }
+
+#howToPlayDiv > h1 {
+    padding-top: 16px;
+}
+
+    /*הדיב של התמונה והלוגו בחלונית איך משחקים*/
+#goodLuckDiv {
+    float: left;
+    bottom: 133px;
+    position: relative;
+    text-align: center;
+    left: 45px;
+    height: 200px;
+}
+
+
+/*האיקס בחלונית איך משחקים ואודות*/
+.closeAbout, .closeHowToPlay {
+    display: flex;
+}
+
+/*דיב שעוטף את האיקס בחלוניות*/
+.xDiv {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: flex;
+    position: absolute;
+    right: 726px;
+    top: 45px;
+    z-index: 11;
+}
+
+/*קישורים של חלונית אודות - כדי שיהיו רספונסיבים*/
+#aboutContent a, #aboutContent img {
+    z-index: 11;
+    position: relative;
+    font-weight: 800;
+    color: #228FEF;
+}
+
+/*תוכן של חלונית אודות*/
+#aboutContent {
+/*    padding-top: -12px;*/
+}
+/*עיצוב לקישור בחלונית אודות לאחר לחיצה*/
+    #aboutContent a:visited {
+        color: #228FEF;
+    }
+
+/*תוכן של חלונית אודות*/
+#aboutContent > p:last-child{
+    font-size:12px;
+    float:left;
+    margin: 8px 0px 0px 19px;
+}
+
+
+/*תמונה של מסגרת לחלוניות*/
+.frameDiv {
+/*    מיקום של מסגרת איך משחקים*/
+    margin: -411px -30px 0px 0px;
+
+    width: 1px;
+    height: 523px;
+}
+
+/*מיקום שונה למסגרת אודות*/
+#aboutDiv .frameDiv {
+    margin: -430px -29px 0px 0px;
+    z-index: 0;
+}
+
+      .frameDiv img{
+          z-index:0;
+      }
+
+
+/*הגדרות פתיחה של חלוניות*/
+.bounceInDown {
+    -webkit-animation-name: bounceInDown;
+    animation-name: bounceInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+
+
+@-webkit-keyframes bounceInDown {
+    0%, 60%, 75%, 90%, 100% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -3000px, 0);
+        transform: translate3d(0, -3000px, 0);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 25px, 0);
+        transform: translate3d(0, 25px, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, 5px, 0);
+        transform: translate3d(0, 5px, 0);
+    }
+
+    100% {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes bounceInDown {
+    0%, 60%, 75%, 90%, 100% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -3000px, 0);
+        transform: translate3d(0, -3000px, 0);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 25px, 0);
+        transform: translate3d(0, 25px, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, 5px, 0);
+        transform: translate3d(0, 5px, 0);
+    }
+
+    100% {
+        -webkit-transform: none;
+        transform: none;
+    }
+}

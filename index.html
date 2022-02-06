@@ -1,0 +1,121 @@
+﻿<!doctype html>
+<html lang="he">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CandyClimb</title>
+    <meta name="description" content="name of game" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="names" />
+
+    <!-- CSS -->
+
+    <link href="styles/myStyle.css" rel="stylesheet" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap');
+    </style>
+    <!-- Scripts -->
+    <!--jQuery library-->
+    <script src="jScripts/jquery-1.12.0.min.js"></script>
+    <!--הקוד שמפעיל את תפריט הניווט-->
+    <script src="jScripts/myScript.js"></script>
+
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <!--קישור לדף עצמו כדי להתחיל את המשחק מחדש בלחיצה על הלוגו-->
+            <a href="index.html">
+                <img id="logo" src="images/aboutWindow/candyLogo.png" />
+            </a>
+            <!--תפריט הניווט בראש העמוד-->
+            <nav>
+                <ul>
+                    <li><a class="about">אודות</a></li>
+                    <li><a class="howToPlay">איך משחקים?</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--חלונית אודות-->
+        <div id="aboutDiv" class="popUp bounceInDown hide">
+            <div class="xDiv">
+                <a class="closeAbout">
+                    <img src="images/x.png" alt="exit window" />
+                </a>
+            </div>
+            <div id="aboutContent">
+                <h1 class="bold">אודות</h1>
+                <img src="images/aboutWindow/Logo.png" />
+                <p><span class="bold">אפיון ופיתוח: </span>נוי מונסונגו, נדר ונטורה ויובל גרינבלט</p>
+                <p class="bold">אופיין ופותח במסגרת פרויקט בקורסים:</p>
+                <p>סביבות לימוד אינטראקטיביות 1 + אינטראקציה ואנימציה 1</p>
+                <p class="bold">תשפ"ב</p>
+                <a href="https://www.hit.ac.il/telem/overview" target="_blank">
+                    <img src="images/aboutWindow/HITlogo.png" alt="קישור לאתר פקולטת טכנולוגיות למידה" title="קישור לאתר פקולטת טכנולוגיות למידה" />
+                </a>
+                <br />
+                <a href="https://www.hit.ac.il/telem/overview">הפקולטה לטכנולוגיות למידה</a>
+                <br />
+                <p>*חלק מהאלמנטים הגרפים נלקחו ממאגר Adobe Stock</p>
+            </div>
+            <div class="frameDiv">
+                <img src="images/candyFrame.png" alt="" />
+            </div>
+        </div>
+
+        <!--חלונית איך משחקים-->
+        <div id="howToPlayDiv" class="popUp bounceInDown hide">
+            <div class="xDiv">
+                <a class="closeHowToPlay">
+                    <img src="images/x.png" alt="exit window" />
+                </a>
+            </div>
+                <h1 class="bold">איך משחקים?</h1>
+                <h2 class="bold">השתמשו במקלדת:</h2>
+                <div id="keyboardDiv">
+                    <span>תזוזה ימינה</span>
+                    <span>תזוזה שמאלה</span>
+                    <span>קפיצה על מרשמלו</span>
+                    <span>בחירה בתשובה הרצויה</span>
+                    <div id="keyboardImgs">
+                        <div>
+                            <img src="images/howToPlayWindow/arrow-right.png" alt="" />
+                        </div>
+                        <div>
+                            <img src="images/howToPlayWindow/arrow-left.png" alt="" />
+                        </div>
+                        <div>
+                            <img src="images/howToPlayWindow/arrow-up.png" alt="" />
+                        </div>
+                        <div>
+                            <img src="images/howToPlayWindow/space.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <h2 class="bold">הסיפור...</h2>
+                <p>
+                    המכשפה הרעה חטפה את עמי וכלאה אותו בקצה המגדל!<br />
+                    עזרו לתמי לחלץ את עמי, אחיה האהוב, באמצעות מענה נכון על השאלות המשחק.<br />
+                    עליכם להזדרז עד כמה שאפשר ולענות בזמן, לפני שהמכשפה תשוב בחזרה למגדל!
+                </p>
+            <div id="goodLuckDiv">
+                <img src="images/howToPlayWindow/witchAndAmi-small.png" alt=""/>
+                <p class="bold">שיהיה לכם בהצלחה!</p>
+                <img src="images/howToPlayWindow/Logo-smaller.png" alt="CandyClimb Logo"/>
+            </div>
+            <div class="frameDiv">
+                <img src="images/candyFrame.png" alt="" />
+            </div>
+        </div>
+
+        <div id="gameArea" class="">
+            <!--src = הקישור של דף המשחק שלכם (לא קובץ האנימייט)-->
+            <iframe id="gameIframe" src="candyClimb.html" frameBorder="0" allowfullscreen="">Browser not compatible.</iframe>
+        </div>
+    </div>
+</body>
+
+</html>
